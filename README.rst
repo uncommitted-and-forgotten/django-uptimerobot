@@ -9,7 +9,7 @@ Installation
 To get the latest stable release from PyPi
 
 .. code-block:: bash
-
+	# TODO:
     $ pip install django-uptimerobot
 
 To get the latest commit from GitHub
@@ -55,8 +55,24 @@ Don't forget to migrate your database
 Usage
 -----
 
-TODO: Describe usage or point to docs. Also describe available settings and
-templatetags.
+Use with Python or in Django:
+
+.. code-block:: python
+
+    >>> from uptimerobot import UptimeRobot
+    >>> up = UptimeRobot(UPTIME_ROBOT_API_KEY)
+    >>> up.addMonitor("arteria Webpage", "https://www.arteria.ch/")
+    True
+
+
+Use in Shell: (success if return value is 0, null)
+
+.. code-block:: bash
+
+    cd /path/to/script/
+    chmod 755 uptimerobot.py # if necessary
+    ./uptimerobot.py monitorFriendlyName=Risiko monitorURL=http://www.risiko.arteria.ch/de/risk/list/
+
 
 
 Contribute
