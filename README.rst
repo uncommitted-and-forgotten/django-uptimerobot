@@ -1,7 +1,9 @@
 Uptime Robot integration for Django
 ============
 
-Uptime Robot http://uptimerobot.com integration for your Django project.
+Uptime Robot http://uptimerobot.com integration for your Django project. 
+There is a Python version (https://github.com/arteria/python-uptimerobot) available containing only the Uptime Robot API 
+implementation.
 
 Installation
 ------------
@@ -59,9 +61,9 @@ Use with Python or in Django:
 
 .. code-block:: python
 
-    >>> from uptimerobot import UptimeRobot
+    >>> from uptimerobot.uptimerobot import UptimeRobot
     >>> up = UptimeRobot(UPTIME_ROBOT_API_KEY)
-    >>> up.addMonitor("arteria Webpage", "https://www.arteria.ch/")
+    >>> up.addMonitor("arteria-webpage", "https://www.arteria.ch/")
     True
 
 
@@ -71,8 +73,7 @@ Use in Shell: (success if return value is 0, null)
 
     cd /path/to/script/
     chmod 755 uptimerobot.py # if necessary
-    ./uptimerobot.py monitorFriendlyName=Risiko monitorURL=http://www.risiko.arteria.ch/de/risk/list/
-
+    ./uptimerobot.py monitorFriendlyName=arteria-webpage monitorURL=https://www.arteria.ch/
 
 
 Contribute
