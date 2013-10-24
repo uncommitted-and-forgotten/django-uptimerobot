@@ -1,12 +1,8 @@
 """URLs for the uptimerobot app."""
-# from django.conf.urls.defaults import patterns, url
+from django.conf.urls.defaults import patterns, url
+ 
 
-# from . import views
 
-
-# urlpatterns = patterns(
-#     '',
-#     url(r'^$',
-#         views.YourView.as_view(),
-#         name='uptimerobot_default'),
-# )
+urlpatterns = patterns('', 
+    url(r'^$', 'uptimerobot.views.index', name='uptimerobot_index'),
+)

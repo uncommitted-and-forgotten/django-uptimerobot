@@ -1,8 +1,9 @@
-"""Views for the uptimerobot app."""
-# from django.views.generic import TemplateView
-
-# from . import models
+from django.http import HttpResponse
 
 
-# class YourView(TemplateView):
-#    template_name = 'uptimerobot/default.html'
+
+def index(request):
+    '''
+    Placeholder page
+    '''
+    return HttpResponse("It works.")
